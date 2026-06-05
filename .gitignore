@@ -1,0 +1,7 @@
+*.zip
+*.rar
+*.bak
+node_modules/
+.env
+git
+node

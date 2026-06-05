@@ -1,0 +1,44 @@
+{
+  "name": "SCS OS Control V3.0.1 Correção - Drawer Acordeão e Botão Direito",
+  "version": "3.0.1",
+  "scope": "frontend visual/UX: correção do botão do painel direito, drawer fechado por padrão e mapa de subtópicos por domínio",
+  "changed_files": [
+    "assets/css/styles.css",
+    "assets/js/app.js",
+    "assets/js/config.js",
+    "CHANGELOG.md",
+    "RELEASE_MANIFEST.json",
+    "DOCUMENTACAO_IMPLEMENTACAO.md",
+    "docs/DOCUMENTACAO_IMPLEMENTACAO_V3_0_1.md"
+  ],
+  "preserved_files": [
+    "apps-script/Code.gs",
+    "assets/js/api-client.js",
+    "assets/js/mock-api.js",
+    "google-sheets/SHEETS_SCHEMA.json",
+    "google-sheets/SHEETS_HEADERS.csv",
+    "index.html"
+  ],
+  "preserved_scope": [
+    "backend",
+    "API",
+    "Apps Script",
+    "Google Sheets",
+    "schema",
+    "login",
+    "mock-api.js",
+    "api-client.js"
+  ],
+  "implementation": [
+    "topbar-right posicionado no canto direito real em desktop",
+    "drawer lateral inicia com grupos fechados por padrão",
+    "remoção de abertura automática de grupos ativos",
+    "mapa visual MENU_ORDER com múltiplos subtópicos por domínio",
+    "aliases visuais para checklists ativos, validação técnica, componentes, acompanhamento e backlog sem alterar backend/schema"
+  ],
+  "next_blocks": [
+    "acompanhamento de ativos/componentes/linhas/setores",
+    "separação Indicadores x Relatórios Gerenciais",
+    "programação de manutenção preventiva/corretiva planejada/emergencial"
+  ]
+}
