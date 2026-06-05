@@ -1,0 +1,411 @@
+## 1.0.0.14 - Mobile Adaptive UX
+
+- Criada camada mobile adaptativa por perfil e contexto operacional, preservando o desktop aprovado no shell fixo.
+- Adicionado padrão de seções recolhíveis para reduzir scroll em QR Code, ficha técnica, OS, checklist e Qualidade Técnica.
+- QR Code passa a comunicar melhor contexto de equipamento, componente, OS e código não identificado, sem criar vínculos inexistentes.
+- Ficha do equipamento no mobile prioriza resumo, OS vinculadas e ações principais, deixando identificação, parâmetros, componentes, evidências e histórico sob demanda.
+- Ficha de componente via QR passa a exibir equipamento pai, status, criticidade, OS vinculada e histórico compacto.
+- Detalhe de OS e checklist técnico ganham leitura mobile progressiva, com checklist e progresso em primeiro plano.
+- Parâmetros, componentes, evidências e histórico recebem compactação visual no mobile, preservando dados e ações existentes.
+- Qualidade Técnica mobile reduz exposição inicial do builder e mantém Modelos e padrões técnicos acessíveis por seção.
+- Preservados backend, API, schema, login, autenticação, permissões, index.html, Dropzone, Centro Operacional, Ativos e Rastreabilidade, regras de checklist/evidência/aprovação e desktop.
+- Não foram criados dados falsos, KPIs falsos, validação falsa de evidência ou entidade nova de não conformidade.
+
+## 1.0.0.13 - Hotfix layout shell fixo
+
+- Estabilizado layout operacional de três zonas no desktop: sidebar esquerda, área central rolável e Dropzone direita.
+- Mantido reader/topbar fixo no topo sem retorno de auto-hide.
+- Criado scroll interno para sidebar e Dropzone quando houver muitos itens/módulos.
+- Área central passa a ser a principal região rolável, evitando conteúdo escondido atrás da sidebar, Dropzone ou topbar.
+- Preservado comportamento mobile com drawer lateral, Dropzone fora do painel lateral fixo e bottom nav acessível.
+- Preservados backend, API, schema, login, autenticação, permissões, regras de checklist/evidência/aprovação e lógica funcional da Dropzone.
+
+## 1.0.0.11 - Hotfix reader/topbar fixo
+
+- Corrigido o comportamento do reader/topbar para permanecer fixo e acessível durante a rolagem em desktop e mobile.
+- Adicionado espaçamento superior global para impedir que o conteúdo fique escondido atrás do reader/topbar fixo.
+- Ajustados pontos de ancoragem/scroll para telas longas como Qualidade Técnica, detalhe de OS, Checklist técnico, Modelos de Checklist e Ativos e Rastreabilidade.
+- Preservados sidebar esquerda, Dropzone direita, bottom nav mobile, layout sem overflow horizontal e funcionamento dos menus em qualquer ponto da rolagem.
+- Preservados backend, API, schema, login, autenticação, permissões, index.html, regras de checklist, regras de evidência, aprovação/reabertura e lógica funcional da Dropzone.
+- Não foram criados KPI falso, dado falso ou alteração funcional sensível.
+
+## 1.0.0.10 - Hotfix layout Dropzone aberta
+
+- Corrigida a coexistência visual entre sidebar esquerda, conteúdo principal e Dropzone “Trabalho Ativo” aberta.
+- Ajustado o layout global para impedir que cards, grids, builders e listas largas fiquem atrás ou sejam engolidos pela Dropzone.
+- Em Qualidade Técnica, os cards operacionais, “Não conformidades”, Validação técnica e Modelos e padrões técnicos passam a respeitar o espaço disponível com a Dropzone aberta.
+- O builder de checklist foi preservado e passa a colapsar em coluna única quando necessário para evitar corte horizontal.
+- Com a Dropzone fechada, a área principal continua podendo expandir.
+- Mobile preservado sem overflow horizontal e sem alteração funcional da Dropzone.
+- Preservados backend, API, schema, login, autenticação, permissões, index.html, regras de checklist, regras de evidência, aprovação/reabertura e dados reais.
+- Não foram criados KPI falso, dado falso ou alteração funcional sensível.
+
+## 1.0.0.9 - Polimento visual Qualidade Técnica
+
+- Refinado o hero do módulo para evitar duplicação de “Qualidade Técnica”, usando “Controle de qualidade da execução” como título interno.
+- Subtexto ajustado para “Checklist, evidência obrigatória, validação técnica e aprovação da OS.”
+- Substituído chip truncado do topo por “Fluxo técnico”, mantendo a cadeia completa no bloco próprio.
+- Ajustada leitura dos cards operacionais para reduzir quebra visual e caixa alta agressiva.
+- Corrigida microcopy de tipo de resposta para “Tipo: OK/NOK”, preservando os botões separados OK e NOK.
+- Refinada linguagem de evidência técnica para regras como NOK, fora do limite, opção Outro e obrigatória, sem alterar upload ou validação.
+- Preservados backend, API, schema, login, autenticação, permissões, index.html, Dropzone, Centro Operacional, Ativos e Rastreabilidade, builder, salvamento de checklist e regras de negócio sensíveis.
+- Não foram criados KPI falso, dado falso, validação falsa ou nova entidade de não conformidade.
+
+## 1.0.0.8 - Refinamento Qualidade Técnica
+
+- Reposicionado o módulo Qualidade Técnica para leitura de controle da execução: OS → Checklist → Evidência → Validação Técnica → Aprovação.
+- Adicionado topo específico “Qualidade Técnica” com subtítulo sobre checklist, evidência obrigatória, validação técnica e aprovação da execução.
+- Criada camada operacional com contagens reais de checklists ativos, itens pendentes, evidências pendentes, itens críticos, aprovações e não conformidades identificáveis por NOK/fora de limite.
+- Reorganizada a experiência por perfil: Operador com execução guiada; Gestor/PCM com checklists ativos, pendências, evidências e aprovação; Admin com visão de qualidade e modelos/padrões técnicos.
+- Melhorados cards de checklists ativos com OS, ativo/componente, status da OS, itens respondidos, pendências, evidências exigidas e próxima ação.
+- Refinado item de checklist como inspeção técnica guiada, destacando criticidade, obrigatoriedade, resposta esperada, resposta registrada, evidência técnica, observação técnica e status do item.
+- Reposicionado builder como “Modelos e padrões técnicos”, preservando criação, edição, versionamento, publicação, regras de evidência, regras de observação, criticidade, tipo de resposta e obrigatoriedade.
+- Corrigida microcopy e acentuação do módulo sem alterar regras de evidência, observação, aprovação ou reabertura.
+- Preservados backend, API, schema, login, autenticação, permissões, index.html, Dropzone, Centro Operacional, Ativos e Rastreabilidade, salvamento de checklist e regras de negócio sensíveis.
+- Não foram criados KPI falso, dado falso, validação falsa de evidência ou entidade nova de não conformidade.
+
+## 1.0.0.7 - Polimento Ficha QR e Histórico Técnico
+
+- Refinada a Ficha QR do ativo em blocos de Identificação, Localização, Condição operacional e Rastreabilidade, preservando todos os dados existentes.
+- Transformados parâmetros operacionais em cards técnicos com status, leitura, faixa, última leitura e origem, sem criar dados falsos.
+- Reorganizado o histórico do ativo como timeline técnica simples, com tipo de evento, componente/OS, descrição, data/hora e origem quando disponível.
+- Ajustada hierarquia das ações finais da ficha, destacando “Criar OS neste equipamento” como ação primária e mantendo “Copiar QR” e “Imprimir ficha” como secundárias.
+- Reduzida a redundância visual do Cadastro técnico: a cadeia Planta → Setor → Linha → Equipamento → Componente passa a atuar como guia estrutural discreto, mantendo as abas principais como navegação.
+- Corrigida microcopy e acentuação em Horímetro, Vibração axial, Temperatura do mancal, Atenção, Inspeção, Descrição técnica, Último evento, Vida útil, Evidência, Histórico, Parâmetros, Instalação, Número de série, Responsável e Intervenção.
+- Preservados backend, API, schema, login, autenticação, permissões, index.html, Dropzone, ações de cadastro, `data-action="resolve-qr"`, KPIs reais e regras de negócio sensíveis.
+
+## 1.0.0.6 - Refinamento Ativos e Rastreabilidade
+
+- Reposicionado o módulo Ativos e Rastreabilidade como mapa operacional de rastreabilidade industrial, conectando ativo físico, QR Code, OS, histórico técnico e indicadores.
+- Reorganizada a primeira leitura de `renderCadastros()` para priorizar ativos cadastrados, criticidade, status, componentes e identificação por QR/ID antes do cadastro técnico.
+- Criada cadeia operacional compacta sem banner decorativo e mantida cadeia estrutural apenas como guia menor do cadastro técnico.
+- Reposicionados formulários como cadastro técnico secundário, preservando salvamento de planta, setor, linha, equipamento e componente.
+- Melhorados cards de equipamentos para destacar TAG/nome, criticidade, status, localização industrial, QR Code e próxima ação.
+- Corrigida microcopy e acentuação do módulo, com preservação de estados neutros e sem criação de KPIs falsos.
+- Preservados backend, API, schema, login, autenticação, permissões, index.html, Dropzone, `data-action="resolve-qr"` e regras de negócio sensíveis.
+
+## 1.0.0.5 - Polimento visual Centro Operacional Admin
+
+- Corrigida microcopy e acentuação da interface em textos operacionais, administrativos e de rastreabilidade.
+- Refinado topo da visão Admin para destacar “Comando Operacional” com subtítulo orientado a OS, risco, aprovação, SLA e backlog.
+- Compactado o bloco “Cadeia operacional rastreável”, reduzindo peso visual dos cards e preservando leitura horizontal.
+- Aplicados ajustes mínimos contra truncamento na navegação, sem redesenhar a sidebar.
+- Preservados backend, API, schema, login, autenticação, permissões, index.html, Dropzone, KPIs reais e regras de negócio sensíveis.
+
+## 1.0.0.4 - Refinamento Centro Operacional Admin
+
+- Reorganizada a primeira visão Admin do Centro Operacional para priorizar comando operacional, risco, pendências e próxima ação antes da camada administrativa.
+- Adicionados indicadores operacionais reais já calculados no frontend: OS abertas, críticas, atrasadas, aprovações, SLA e backlog, sem criação de KPIs falsos.
+- Criado bloco compacto “Cadeia operacional rastreável” com o fluxo Ativo físico → QR Code → OS → Checklist → Evidência → Aprovação → Histórico → Indicadores.
+- Criado bloco “Prioridades operacionais” usando OS críticas, atrasadas e aprovações existentes, com estados neutros quando não há pendências.
+- Movidos Identidades, Permissões, Workflow, Auditoria, Backup e Integrações para camada secundária “Governança e integridade”, mantendo todos os acessos e botões data-view.
+- Preservadas as visões Operador e Gestor/PCM, a Dropzone Trabalho Ativo v1.0.0.3, backend, API, schema, login, autenticação, permissões, index.html e regras de negócio.
+
+## 1.0.0.3 - Refinamento visual Trabalho Ativo
+
+- Refinado cabeçalho da Dropzone para leitura premium com título principal “Trabalho Ativo” e subtítulo menor “Módulos operacionais por perfil”.
+- Controles de mover, remover e configuração visual foram limitados ao modo edição; no modo operacional permanecem apenas recolher/expandir e a ação principal do módulo.
+- Padronizados nomes curtos de módulos para evitar truncamento crítico: Criar OS, Preventiva, Indicadores, Aprovações, Scanner QR, Evidências e Tarefas.
+- Reduzida densidade visual de chips, bordas e botões para manter leitura operacional sem aparência de painel técnico carregado.
+- Mantidas mensagens neutras de estado vazio sem simular números, eventos ou pendências inexistentes.
+- Preservados backend, API, schema, login, autenticação, permissões, index.html, regras de negócio e persistência local existente.
+
+## 1.0.0.2 - Refinamento Trabalho Ativo da Dropzone
+
+- Refinada a Dropzone Funcional Direita para comunicar area de trabalho ativa, nao barra de atalhos.
+- Alterado titulo da interface para "Trabalho Ativo" e subtitulo para "Modulos operacionais por perfil".
+- Separado o modo operacional do modo edicao: a biblioteca de modulos aparece apenas em edicao.
+- Melhorados cards dos modulos com contexto operacional, status, proxima acao e linguagem por perfil.
+- Removidos textos de atalho no modo operacional e substituidas mensagens vazias por estados neutros sem simular dados reais.
+- Preservados backend, API, schema, login, autenticacao, permissoes, index.html e regras de negocio.
+
+## 1.0.0.1 - Base Oficial SaaS Industrial e Dropzone Funcional
+
+- Reposicionada a leitura oficial do sistema como SaaS Industrial em produção inicial controlada.
+- Transformado o painel direito em Dropzone Funcional configurável.
+- Adicionados módulos dinâmicos na área direita com remoção, reordenação e recolhimento.
+- Criado modo de edição da Dropzone com módulos disponíveis por perfil, permissão e dispositivo.
+- Preparada separação entre documentação frontend e backend.
+- Melhorada orientação de formulários e organização visual.
+- Preservados backend, API, Apps Script, Google Sheets, mock local e schema.
+- `config.js` não foi alterado porque não estava na lista de arquivos permitidos neste bloco; appVersion deve ser atualizado em bloco autorizado.
+
+## 3.0.1 - Correção Drawer Acordeão e Botão Direito
+
+- Corrigido posicionamento do botão do painel de ações rápidas para o canto direito real da topbar desktop.
+- Corrigido drawer lateral para iniciar com categorias fechadas por padrão.
+- Removida abertura automática de subtópicos ativos no carregamento da tela.
+- Reorganizado o mapa visual do drawer para que cada categoria tenha múltiplos subtópicos úteis.
+- Adicionados subtópicos visuais para checklists ativos, validação técnica, componentes, acompanhamento e backlog sem alterar backend/schema.
+- Mantido comportamento de acordeão: clicar na categoria abre; clicar novamente fecha.
+- Preservados backend, API, Apps Script, Google Sheets, schema, mock local e api-client.
+
+## 2.1.1 - Hotfix Ações Rápidas, Módulos e Mobile Compactado
+
+- Reposicionado o controle do painel de ações rápidas no canto direito do desktop.
+- Removidos botões duplicados de notificação e nova ação da topbar.
+- Adicionado botão de edição/configuração no painel de ações rápidas.
+- Corrigido posicionamento do FAB mobile para o canto inferior direito.
+- Compactado o drawer mobile com menor fonte, menor espaçamento e melhor aproveitamento.
+- Reorganizada visualmente a tela de Módulos por perfil, dispositivo e tipo de exibição.
+- Reduzida duplicidade visual de QR Code, notificações e ações rápidas.
+- Aplicada regra visual de disponibilidade por perfil, permissão e dispositivo.
+- Preservados backend, API, Apps Script, mock local e schema.
+
+## 2.1.0 - Auditoria Final Mobile e Ajustes de UX Operacional
+
+- Ajustada experiência mobile para operação com poucos cliques.
+- Ocultado/adaptado painel direito desktop no mobile.
+- Criado padrão de ações rápidas mobile via botão compacto/bottom sheet.
+- Reorganizada navegação mobile por perfil.
+- Melhorado fluxo mobile de QR Code com scanner direto e fallback manual.
+- Reduzidas repetições visuais como QR Code duplicado.
+- Compactada a home mobile do operador.
+- Preservadas funções de gestor e admin no mobile em menus compactos.
+- Ajustado posicionamento dos botões direitos da topbar desktop.
+- Preservados backend, API, Apps Script, mock local e schema.
+
+## 2.0.9 - Reorganização Visual Desktop SaaS Industrial
+
+- Reorganizada a interface desktop em três zonas: drawer lateral, área central e painel de ações rápidas.
+- Centralizada a navegação superior principal.
+- Ocultados indicadores técnicos de API/perfil da topbar para uso futuro em área administrativa.
+- Reestruturado o menu com nomenclatura SaaS Industrial.
+- Corrigida independência visual entre grupos e subtópicos do menu.
+- Adicionado painel direito de ações rápidas com comportamento minimizável.
+- Melhorado comportamento de expansão da área central.
+- Ajustadas scrollbars para aparência mais discreta.
+- Melhorado acabamento visual desktop sem alterar backend, API, Apps Script, schema ou login.
+
+## 2.0.8 - Hotfix Navegação Lateral, Mapa de Menu e Layout Checklist
+
+- Corrigido clique nos tópicos principais do drawer lateral.
+- Removido uso de `data-action="noop"` em categorias principais do menu.
+- Criado mapa mais claro de categorias e subcategorias.
+- Reduzida repetição de nomes no menu e nas telas.
+- Auditados ícones do menu com padrão Material Symbols.
+- Corrigido espaço branco excessivo na tela de Checklist.
+- Ajustado layout do formulário de criação de modelos de checklist.
+- Preservados backend, API, Apps Script, mock local e schema.
+
+## 2.0.7-audit - Auditoria de regressão visual
+
+- Auditado o hotfix visual V2.0.7.
+- Corrigido seletor que escondia `span.material-symbols-rounded` no drawer fechado.
+- Preservados ícones do menu quando a sidebar está recolhida em 72px.
+- Mantida ocultação apenas dos textos do menu.
+- Confirmado que `.main-grid:not(.expanded)` não força 246px.
+- Confirmado que checkbox/radio têm tamanho fixo de 18px.
+- Confirmado que backend, API, Apps Script, mock local e schema não foram alterados.
+
+## 2.0.7 - Hotfix Drawer, Checkbox e Estabilidade Visual
+
+- Corrigido drawer/sidebar minimizável no desktop.
+- Corrigido drawer off-canvas no mobile.
+- Corrigidos checkboxes gigantes causados por regra global de input.
+- Corrigido comportamento de botões com altura excessiva.
+- Removidas sobrescritas duplicadas que impediam o menu de recolher.
+- Preservados backend, API, Apps Script, mock local e schema.
+- Mantida interface SaaS industrial V2.
+
+## 2.0.0-login.1 - Hotfix de login no modo mock
+
+- Corrigido risco de falha de login causada por base local antiga no navegador.
+- Alterado storageKey do mock local para `scs-os-control-local-db-v2`.
+- Forçada criação de base mock limpa para a release 2.0.0.
+- Preservados API, Apps Script, api-client, mock-api e schema da planilha.
+
+## 2.0.0 - SaaS UI Implementation / Bloco 6
+
+- Fechada documentação final da release 2.0.0 SaaS UI.
+- Atualizado README.md com status, escopo, arquitetura e instruções principais.
+- Criado documento de release final em docs/RELEASE_2_0_0_SAAS_UI.md.
+- Criado checklist de teste em docs/CHECKLIST_TESTE_RELEASE_2_0_0.md.
+- Criadas instruções de instalação em docs/INSTALACAO_RELEASE_2_0_0.md.
+- Validado assets/js/app.js com node --check.
+- Preservados API, Apps Script, mock local, api-client e schema da planilha.
+
+## 2.0.0 - SaaS UI Implementation / Bloco 5
+
+- Aplicado polimento final de responsividade.
+- Otimizada leitura em 360px, 390px, 414px, tablet, notebook e desktop.
+- Ajustados topbar, dropdowns, bottom navigation, cards, tabelas, filtros, eventos e auditoria.
+- Reduzido risco de overflow horizontal no mobile.
+- Melhorada ergonomia de botões e áreas clicáveis no celular.
+- Adicionadas regras de impressão/consulta técnica.
+- Preservados API, Apps Script, mock local, api-client e schema da planilha.
+
+## 2.0.0 - SaaS UI Implementation / Bloco 4
+
+- Melhorada central de eventos com prioridade operacional, filtros por categoria e cards acionáveis.
+- Melhorado painel de notificações com classificação por risco, aprovação, checklist, técnico e sistema.
+- Adicionadas ações recomendadas e perfil responsável nos eventos.
+- Melhorada auditoria visual com resumo por severidade, linha do tempo e ícones Material Symbols.
+- Mantidas chamadas existentes de logs.listar, eventos locais, OS e QR Code.
+- Preservados API, Apps Script, mock local, api-client e schema da planilha.
+
+## 2.0.0 - SaaS UI Implementation / Bloco 3
+
+- Melhoradas telas operacionais de OS, detalhe da OS, checklist técnico e QR Code.
+- Atualizada lista de OS com cards operacionais, filtros por status e progresso de checklist.
+- Atualizado detalhe da OS com ficha operacional, progresso, timeline, eventos e histórico.
+- Melhorada execução de checklist com blocos de resposta, observação, evidência e estados visuais.
+- Melhorada tela QR Code com foco em rastreabilidade industrial e leitura mobile.
+- Melhorados estilos operacionais para histórico, eventos e auditoria.
+- Preservados API, Apps Script, mock local, api-client e schema da planilha.
+
+## 2.0.0 - SaaS UI Implementation / Bloco 2
+
+- Implementado dashboard por perfil para Operador, Gestor/PCM e Admin Master.
+- Adicionada Home do Operador com próxima ação, OS prioritárias e execução guiada.
+- Adicionada visão do Gestor/PCM com fila de aprovação, OS críticas, atrasadas, SLA e risco operacional.
+- Adicionada visão do Admin Master com governança, usuários, permissões, workflow, auditoria, backup e integrações.
+- Melhorados cards de OS, ações por perfil, risco e criticidade.
+- Preservados API, Apps Script, mock local, api-client e schema da planilha.
+
+## 2.0.0 - SaaS UI Implementation / Bloco 1
+
+- Iniciada migração visual para interface SaaS industrial.
+- Mantida arquitetura funcional da V Atual.
+- Atualizada base visual em tema claro profissional.
+- Adicionado padrão de topbar fixa.
+- Adicionado padrão de sidebar/dock recolhível.
+- Adicionado padrão de bottom navigation mobile.
+- Adicionada navegação central por ícones usando Material Symbols.
+- Adicionadas ações rápidas por perfil no shell visual.
+- Melhorados cards, botões, badges e estrutura visual base.
+- Preservados API, Apps Script, mock local e schema.
+
+# 1.5.9 - Auditoria visual do tema claro e dashboard responsivo
+
+- Corrige resquícios do tema escuro em módulos, workflow, QR, checklist, eventos, cards e tabelas.
+- Reforça contraste global de textos, campos, chips, tags, notificações e painéis.
+- Compacta o dashboard para leitura técnica em notebook, reduzindo cards, gráficos, barras e painel de risco.
+- Mantém funções existentes; não altera API, banco, Apps Script, mock ou checklist dinâmico.
+- Melhora responsividade mobile mantendo funções encapsuladas por menus/cards sem remover acesso administrativo.
+
+# Changelog
+
+## 1.5.8 - UI Performance / Sistema claro
+
+Data: 2026-06-03
+
+Escopo fechado: somente interface, layout, tema, dashboard, mobile e eventos.
+
+- Removida a camada visual escura pesada por override CSS claro e técnico.
+- Topbar, menu, cards, painéis, formulários e bottom navigation compactados.
+- Dashboard recebeu layout mais denso para leitura executiva em uma tela no desktop.
+- Mobile manteve as funções, mas com navegação e elementos mais encapsulados.
+- Central de eventos ganhou cards de resumo operacional, filtros mais legíveis e contraste corrigido.
+- Corrigido risco visual de notificações/cards com fundo claro e texto claro.
+- Nenhuma alteração feita em Apps Script, banco, API ou checklist dinâmico.
+
+## 1.5.7 - Checklist dinamico tecnico
+
+Data: 2026-06-03
+
+Status: pacote funcional para teste em mock local e Apps Script.
+
+### Adicionado
+
+- Motor de checklist dinamico com tipos `OK_NOK`, `OK_NOK_NA`, `TEXTO`, `NUMERICO`, `SELECT`, `DATA`, `FOTO` e `LEITURA_TECNICA`.
+- Campos tecnicos por item: unidade, valor minimo, valor maximo, valor esperado, opcoes, criticidade, regra de evidencia e regra de observacao.
+- Validacao de valor numerico fora do limite.
+- Observacao obrigatoria condicional para NOK, fora de limite e opcao Outro.
+- Evidencia obrigatoria condicional por regra.
+- Bloqueio de finalizacao da OS para checklist pendente, evidencia ausente, item critico NOK ou valor invalido.
+- Seeds de exemplo: `Motor WEG 15 cv - Lubrificacao` e `Motor WEG 15 cv - Inspecao`.
+
+### Alterado
+
+- `app.js`: renderizacao dinamica dos itens e builder de modelo de checklist.
+- `mock-api.js`: contrato de checklist dinamico e validacao local.
+- `Code.gs`: schema Apps Script, criacao de checklist por modelo e validacao backend.
+- Documentacao de schema e cabecalhos da planilha.
+
+Todas as mudanças relevantes do SCS OS Control devem ser registradas aqui antes de publicar uma nova versao online.
+
+## 1.5.6 - Pacote real de deploy e UX operacional
+
+Data: 2026-06-02
+
+Status: pronto para deploy inicial em Google Apps Script, Google Sheets e GitHub Pages.
+
+### Adicionado
+
+- Pacote de publicacao com arquivos separados para frontend, Apps Script, Google Sheets e documentacao.
+- `CHANGELOG.md` como controle de versao operacional.
+- `apps-script/appsscript.json` com runtime V8 e fuso `America/Sao_Paulo`.
+- `assets/js/config.production.example.js` para configurar a URL real do Web App.
+- `google-sheets/SHEETS_SCHEMA.json` para documentar todas as abas e cabecalhos.
+- `google-sheets/SHEETS_HEADERS.csv` para conferencia rapida das abas da planilha.
+- `docs/DEPLOY_REAL.md` com passo a passo de publicacao.
+
+### Alterado
+
+- Versao ativa do frontend atualizada para `1.5.6`.
+- Versionamento do mock local atualizado para registrar `1.5.6` como ativo.
+- Versionamento do Apps Script atualizado para inserir `VER-1-5-6` na aba `versionamento`.
+- Dashboard compactado com contraste mais forte para leitura operacional.
+- Cards de versionamento passaram a ser informativos, sem clique confuso.
+- Menu lateral removeu bloco redundante de usuario.
+- Topbar passou a indicar ambiente `Local`, `API online` ou `Offline`.
+- Bottom nav mobile ficou mais compacto para Mobile S, M e L.
+- Tela de usuarios ganhou edicao, reset de senha e bloqueio/reativacao usando `usuarios.salvar`.
+- Construtor de workflow reorganizado em etapas de acao, transicao e governanca.
+- Fluxos customizados podem ser adicionados, reordenados e removidos antes de salvar.
+- Modelos de checklist podem ser carregados para edicao ou nova versao.
+- Auditoria ficou mais compacta e sem visual de planilha.
+
+### Mantido
+
+- Stack HTML, CSS, JavaScript Vanilla, Google Apps Script e Google Sheets.
+- Contratos logicos existentes da API.
+- Schema da planilha sem migracao obrigatoria.
+- Mock local por `localStorage`.
+- Auditoria e historico preservados.
+
+### Validado
+
+- `app.js` importado sem erro.
+- Localhost carregou sem erro de console.
+- Dashboard, Versionamento, Identidades, Automacao, Checklists e Auditoria abriram sem erro.
+- Mobile validado em 320px, 375px e 425px sem overflow horizontal.
+- Versionamento exibiu quatro cards estaticos na tela correta.
+- Usuarios exibiu acoes de editar, resetar senha e bloquear/reativar.
+- Automacao exibiu workflow em etapas.
+- Checklists exibiu edicao de modelos.
+- Auditoria exibiu cards compactos sem tabela.
+
+## 1.5.5 - Central de eventos por tags
+
+Data: 2026-06-01
+
+- Central de eventos separada por tags.
+- Filtros mobile por tipo de evento.
+- Cards contextuais para aprovacao, SLA, checklist, operacao, tecnico e sistema.
+- Seeds reais de eventos operacionais no mock e no Apps Script.
+- Aba `versionamento` sincroniza somente uma versao ativa.
+
+## 1.5.4 - Contraste, evidencias e rastreabilidade QR
+
+- Correcoes de leitura no tema escuro.
+- Evidencias por arquivo/camera no checklist usando o contrato existente de anexos.
+- Ficha QR com parametros, evidencias e leituras recentes.
+
+## 1.5.3 - Ciclo de vida de componentes
+
+- Registro de eventos tecnicos de componente.
+- Acoes de componente: inspecao, ajuste, troca e bloqueio.
+- Aba administrativa de versionamento.
+
+## 1.5.2 - Leitura operacional por QR
+
+- Registro de leitura de parametro operacional.
+- Atualizacao de valor atual e status operacional do parametro.
+- Auditoria de leitura tecnica.
+
+## 1.5.1 - Nucleo de rastreabilidade QR
+
+- Ficha operacional de ativo por QR.
+- Parametros, componentes, OS pendentes e historico tecnico.

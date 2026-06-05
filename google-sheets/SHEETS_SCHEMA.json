@@ -1,0 +1,305 @@
+{
+  "version": "1.5.7",
+  "source": "SCS OS Control",
+  "database": "Google Sheets",
+  "sheets": {
+    "plantas": [
+      "id",
+      "nome",
+      "cnpj",
+      "cidade",
+      "uf",
+      "status"
+    ],
+    "setores": [
+      "id",
+      "planta_id",
+      "nome",
+      "responsavel",
+      "status"
+    ],
+    "linhas": [
+      "id",
+      "setor_id",
+      "nome",
+      "capacidade",
+      "status"
+    ],
+    "equipamentos": [
+      "id",
+      "nome",
+      "setor_id",
+      "linha_id",
+      "tipo",
+      "fabricante",
+      "modelo",
+      "numero_serie",
+      "data_instalacao",
+      "horimetro_atual",
+      "descricao",
+      "criticidade",
+      "qr_code",
+      "status"
+    ],
+    "componentes": [
+      "id",
+      "equipamento_id",
+      "nome",
+      "tipo",
+      "criticidade",
+      "status"
+    ],
+    "parametros_equipamento": [
+      "id",
+      "equipamento_id",
+      "nome",
+      "valor",
+      "unidade",
+      "limite_min",
+      "limite_max",
+      "status_operacional",
+      "atualizado_em"
+    ],
+    "leituras_parametros": [
+      "id",
+      "parametro_id",
+      "equipamento_id",
+      "valor",
+      "unidade",
+      "data_hora",
+      "origem"
+    ],
+    "historico_componentes": [
+      "id",
+      "componente_id",
+      "equipamento_id",
+      "acao",
+      "descricao",
+      "vida_util_h",
+      "horimetro_evento",
+      "usuario",
+      "data_hora"
+    ],
+    "usuarios": [
+      "id",
+      "nome",
+      "email",
+      "senha_hash",
+      "token",
+      "perfil",
+      "status",
+      "setor",
+      "criado_em"
+    ],
+    "permissoes": [
+      "id",
+      "perfil",
+      "chave",
+      "liberado",
+      "atualizado_em"
+    ],
+    "modulos": [
+      "id",
+      "nome",
+      "descricao",
+      "menu_ids",
+      "permissoes",
+      "status",
+      "ordem",
+      "atualizado_em"
+    ],
+    "modulo_perfis": [
+      "id",
+      "modulo_id",
+      "perfil",
+      "liberado",
+      "permissoes_bloqueadas",
+      "atualizado_em"
+    ],
+    "listas": [
+      "id",
+      "tipo",
+      "valor",
+      "status"
+    ],
+    "config": [
+      "id",
+      "chave",
+      "valor",
+      "status"
+    ],
+    "workflow_regras": [
+      "id",
+      "acao",
+      "nome",
+      "status_origem",
+      "status_destino",
+      "permissao",
+      "perfis",
+      "exige_responsavel",
+      "exige_checklist_ok",
+      "status",
+      "atualizado_em"
+    ],
+    "checklist_modelos": [
+      "id",
+      "nome",
+      "tipo_os",
+      "versao",
+      "status",
+      "criado_por",
+      "criado_em"
+    ],
+    "checklist_modelo_itens": [
+      "id",
+      "modelo_id",
+      "item_id",
+      "pergunta",
+      "obrigatorio",
+      "evidencia_obrigatoria",
+      "ordem",
+      "status",
+      "tipo_resposta",
+      "unidade",
+      "valor_min",
+      "valor_max",
+      "valor_esperado",
+      "opcoes",
+      "critico",
+      "evidencia_regra",
+      "observacao_regra",
+      "status_item"
+    ],
+    "ordens_servico": [
+      "id",
+      "ativo_id",
+      "componente_id",
+      "tipo",
+      "checklist_modelo_id",
+      "prioridade",
+      "criticidade",
+      "status",
+      "solicitante",
+      "responsavel",
+      "prazo",
+      "descricao",
+      "instrucoes",
+      "criado_em",
+      "iniciado_em",
+      "finalizado_em",
+      "aprovado_em"
+    ],
+    "checklist_execucao": [
+      "id",
+      "os_id",
+      "item_id",
+      "pergunta",
+      "obrigatorio",
+      "resposta",
+      "observacao",
+      "evidencia",
+      "evidencia_obrigatoria",
+      "responsavel",
+      "data_hora",
+      "tipo_resposta",
+      "unidade",
+      "valor_min",
+      "valor_max",
+      "valor_esperado",
+      "opcoes",
+      "critico",
+      "evidencia_regra",
+      "observacao_regra",
+      "status_item"
+    ],
+    "historico": [
+      "id",
+      "os_id",
+      "ativo_id",
+      "acao",
+      "usuario",
+      "data_hora",
+      "resumo"
+    ],
+    "materiais_os": [
+      "id",
+      "os_id",
+      "material",
+      "quantidade",
+      "usuario",
+      "data_hora"
+    ],
+    "eventos": [
+      "id",
+      "os_id",
+      "tipo",
+      "usuario",
+      "resumo",
+      "data_hora"
+    ],
+    "anexos": [
+      "id",
+      "os_id",
+      "checklist_id",
+      "nome",
+      "usuario",
+      "data_hora"
+    ],
+    "kpis_diarios": [
+      "id",
+      "data",
+      "indicador",
+      "valor"
+    ],
+    "dashboard_cache": [
+      "id",
+      "perfil",
+      "usuario",
+      "dados_json",
+      "data_hora"
+    ],
+    "audit_log": [
+      "id",
+      "usuario",
+      "perfil",
+      "acao",
+      "modulo",
+      "registro_id",
+      "antes",
+      "depois",
+      "data_hora"
+    ],
+    "sync_log": [
+      "id",
+      "origem",
+      "status",
+      "resumo",
+      "data_hora"
+    ],
+    "relatorios": [
+      "id",
+      "nome",
+      "filtro_json",
+      "usuario",
+      "data_hora"
+    ],
+    "versionamento": [
+      "id",
+      "versao",
+      "titulo",
+      "data",
+      "status",
+      "escopo",
+      "endpoints",
+      "schema",
+      "observacoes"
+    ]
+  },
+  "requiredInitialAction": "Executar setupInicial() uma vez no Apps Script.",
+  "notes": [
+    "Nao alterar nomes de abas ou cabecalhos sem migracao.",
+    "A aba versionamento deve manter somente uma linha com status ATIVO.",
+    "O endpoint logs.listar le audit_log.",
+    "O frontend usa mock local quando apiUrl esta vazio."
+  ]
+}
